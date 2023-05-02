@@ -9,6 +9,7 @@ To give a broad outline of our approach, the algorithm begins with integrating s
 
 To extract frequent patterns from the dataset, we are using SLEUTH, a tree mining algorithm, which is able to extract frequent subtrees from a tree database. In this context, spatio-temporal correlation of events is encoded through tree-based structures according to different space and time constraints. SLEUTH is a sequential algorithm that can handle large datasets and extract patterns in a highly efficient manner.
 
+Dataset is [Large-Scale Traffic and Weather Events Dataset](https://smoosavi.org/datasets/lstw).
 
 The code repository is organized as follows:
 - `conf.py`: configuration file containing global variables;
