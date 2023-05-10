@@ -59,47 +59,5 @@ class IntervalTree:
                 queue.append(n.right)
         return res
 
-# if __name__ == '__main__':
-#     import numpy as np
-#     import time
-#     import pandas as pd
-#     from pathlib import Path
-#     np.random.seed(48)
 
-#     df = pd.read_csv(Path.home() / 'Downloads' / 'WeatherEvents_Aug16_Dec20_Publish.csv', parse_dates=['StartTime(UTC)', 'EndTime(UTC)']).sample(n=30000)
-
-#     start = df['StartTime(UTC)']
-#     end = df['EndTime(UTC)']
-#     indexes = np.arange(start.size, dtype=int)
-
-#     query = start
-
-#     it = IntervalTree()
-#     for idx, (s, e) in enumerate(zip(start, end)):
-#         i = Interval(s, e)
-#         it.add(i, id=idx)
-
-#     print('interval tree generation ended')
-#     start_t = time.time()
-#     for q in query:
-#         res = it.query_point(q)
-#         # res_idx = [x['id'] for x in res]
-#         # manual_res = np.stack([q >= start, q <= end], axis=-1).all(axis=-1)
-
-#         # print(f'{res_idx}')
-#         # print(indexes[manual_res])
-#         # assert len(res) == manual_res.sum()
-
-#     delta = time.time() - start_t
-
-#     print(f'my method: {delta}')
-
-#     other_meth = []
-#     start_t = time.time()
-#     for q in query:
-#         for idx, (s, e) in enumerate(zip(start, end)):
-#             if s <= q <= e:
-#                 other_meth.append(idx)
-#     delta2 = time.time() - start_t
-#     print(f'other method: {delta2}')
     
